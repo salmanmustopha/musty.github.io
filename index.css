@@ -225,7 +225,6 @@ transform: rotate(360deg);
   justify-content: center; */
   position: relative;
   padding: 230px 0px;
-
 }
 #button{
 width: 250px;
@@ -246,35 +245,35 @@ margin: 10px 0px;
 background-color: white;
 color: black;
 }
-.bxs-cart-download{
-font-size: 30px;
-color: black;
-}
 
-
-.bx-menu{
+.xb{
 width: 30px;
 height: 30px;
 transition: 0.1s ease;
 cursor: pointer;
-}
-
-.bxs-message-square-x{
-color: red;
-position: absolute;
-margin-left: 580px;
-font-size: 25px;
-cursor: pointer;
-transition: 0.9s color ease;
-}
-.bxs-message-square-x:hover{
-color: orangered;
-}
-
-
-input[type="checkbox"]{
+color: blue;
+font-size: 30px;
+position: relative;
 display: none;
 }
+
+.xc{
+width: 30px;
+height: 30px;
+transition: 0.1s ease;
+cursor: pointer;
+color: blue;
+font-size: 30px;
+position: relative;
+display: none;
+}
+
+.bxs-cart{
+color: yellow;
+display: none;
+}
+
+
 .nexts img{
 width: 280px;
 border-radius: 5px;
@@ -314,17 +313,16 @@ color: orangered;
 border-bottom: 3px solid orangered;
 }
 
-.abo-h2{
-  text-align: center;
-  font-size: 40px;
-}
+
 .about{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .about-img img{
   width: 500px;
+  margin: 90px 0px;
 }
 
 .about-text{
@@ -351,7 +349,32 @@ width: 30px;
   font-weight: 200;
   padding: 20px 0px;
 }
+.about-text ul{
+  display: block;
+  line-height: 50px;
+}
+.about-text ul li{
+  font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  list-style:disc;
 
+}
+.about-text button{
+  width: 120px;
+  height: 40px;
+  background: rgba(255, 255, 3, 0.8);
+  border: none;
+  border-radius: 70px;
+  font-size: 16px;
+}
+#tow{
+  width: 120px;
+  height: 40px;
+  background: none;
+  border: 1px solid black;
+  border-radius: 70px;
+  font-size: 16px;
+}
 
 
 .boxs {
@@ -545,15 +568,175 @@ margin-bottom: 15px;
   }
 }
 
+.online {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeSlideUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
 
-/* === Main Menu Container === */
+.online h4 {
+  font-size: 2.5rem;
+  color: #d23f3f;
+  margin-bottom: 1rem;
+  animation: bounceIn 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.online p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+.online img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: deliverMotion 3s ease-in-out infinite;
+  margin-bottom: 2rem;
+}
+
+/* Delivery Animation */
+@keyframes deliverMotion {
+  0% {
+    transform: translateX(-50px) rotate(-5deg);
+  }
+  25% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50px) rotate(-5deg);
+  }
+}
+
+
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 5;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.online img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+} 
+
+
+.gallery {
+  padding: 40px 20px;
+  background: linear-gradient(to bottom right, #fff5e1, #ffe0b2);
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  color: #d35400;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.flemx {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flemx img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.flemx img:nth-child(1) { animation-delay: 0.2s; }
+.flemx img:nth-child(2) { animation-delay: 0.4s; }
+.flemx img:nth-child(3) { animation-delay: 0.6s; }
+.flemx img:nth-child(4) { animation-delay: 0.8s; }
+
+.flemx img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .flemx img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+
 .menu {
   padding: 60px 40px;
   background: linear-gradient(to right, #fffdf9, #ffe8d8);
   text-align: center;
 }
 
-/* === Heading === */
+
 .menu h6 {
   font-size: 28px;
   color: #ff7043;
@@ -597,7 +780,22 @@ margin-bottom: 15px;
   gap: 30px;
   justify-content: center;
 }
-
+.like p{
+  color: red;
+  font-size: 40px;
+}
+.ba{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin: 17px 0px;
+}
+.like button{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 /* === Each Food Card === */
 .boom {
   background-color: #fff;
@@ -640,6 +838,7 @@ margin-bottom: 15px;
   color: #333;
   margin-bottom: 10px;
   font-weight: 600;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .tests .lor {
@@ -651,11 +850,22 @@ margin-bottom: 15px;
 
 .tests h5 {
   font-size: 18px;
-  color: #ff7043;
+  color: red;
   margin-bottom: 10px;
   font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.boom #bt{
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  font-size: 17px;
+}
 /* === Cart Icon === */
 .buyer i {
   font-size: 20px;
@@ -670,6 +880,17 @@ margin-bottom: 15px;
 .buyer i:hover {
   background-color: #fb8c00;
   transform: scale(1.1);
+}
+#vie{
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 40px 0px;
 }
 
 .footer {
@@ -820,6 +1041,59 @@ margin-bottom: 15px;
 
 }
 
+/* Hamburger and Close icons hidden by default on large screens */
+#xb, #xc {
+  display: none;
+  font-size: 28px;
+  color: black;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  .header {
+    padding: 20px 8%;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: black;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .navbar a {
+    margin: 15px 0;
+    font-size: 20px;
+  }
+
+  #xb {
+    display: block;
+    color: #d23f3f;
+  }
+
+  .navbar.active {
+    display: flex;
+
+  }
+
+  #xc {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 100;
+    color: #d23f3f;
+  }
+
+  .log-Ins, .Contacts {
+    display: none; /* Hide buttons on small screens if not essential */
+  }
+}
 
 
   
@@ -894,9 +1168,7 @@ background-color: black;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 17px;
 }
-.header{
-  height: 150px;
-}
+
 
   .about{
 
@@ -908,4 +1180,70 @@ font-size: 17px;
     justify-self: center;
     text-align: center;
   }
-  }
+  
+.logo{
+font-size: 25px;
+color: white;
+font-weight: 600;
+transition: 0.3s ease;
+}
+.logo:hover{
+color: orangered;
+text-shadow: 0 0 25px orangered
+0 0 50px orangered;
+transform: scale(1.1);    
+}
+span{
+color: orangered;
+}
+.navbar a:hover{
+color: orangered;
+border-bottom: 3px solid transparent;
+}
+
+
+
+
+
+.Contact{
+padding: 10px 20px;
+background-color: white;
+color: black;
+border: 2px solid transparent;
+border-radius: 8px;
+font-size: 16px;
+letter-spacing: 1px;
+font-weight: 600;
+transition: 0.5s ease;
+font-family: 'poppins', sans-serif;
+}
+.Contact:hover{
+box-shadow: 0 0 100px orangered;
+background-color: orangered;
+color: white;
+}
+#btn{
+color: yellow;
+
+}
+.log-Ins{
+padding: 10px 20px;
+background-color: white;
+color: black;
+border: 2px solid transparent;
+border-radius: 8px;
+font-size: 16px;
+letter-spacing: 1px;
+font-weight: 550;
+transition: 0.5s ease;
+font-family: 'poppins', sans-serif;
+cursor: pointer;
+}
+.log-In:hover{
+box-shadow: 0 0 100px orangered;
+background-color: orangered;
+color: white;
+}
+
+
+}
